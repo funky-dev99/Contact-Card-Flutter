@@ -9,35 +9,92 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home:Scaffold(
         backgroundColor: Colors.grey,
         body: SafeArea(
             child: Column(
               children: [
-                Container(
-                  child: Text('Shahiru 01'),
-                  padding: EdgeInsets.fromLTRB(10.0, 10.0, 0, 0),
-                  height: 100.0,
-                  width: 100.0,
-                  color: Colors.amberAccent,
-                  margin: EdgeInsets.only(left: 10.0),
+                SizedBox(
+                  height: 60.0,
                 ),
-                Container(
-                  child: Text('Shahiru 02'),
-                  padding: EdgeInsets.fromLTRB(10.0, 10.0, 0, 0),
-                  height: 100.0,
-                  width: 100.0,
-                  color: Colors.blue,
-                  margin: EdgeInsets.only(left: 10.0),
+                Center(
+                  child:
+                  CircleAvatar(
+                    radius: 100.0,
+                    backgroundImage: AssetImage('images/photo2.png'),
+                  ),
                 ),
-                Container(
-                  child: Text('Shahiru 03'),
-                  padding: EdgeInsets.fromLTRB(10.0, 10.0, 0, 0),
-                  height: 100.0,
-                  width: 100.0,
-                  color: Colors.deepPurple,
-                  margin: EdgeInsets.only(left: 10.0),
+
+                SizedBox(
+                  height: 20.0,
                 ),
+                Text('Shahiru Edirisinghe',
+                  style: TextStyle(
+                      fontFamily: 'Pacifico',
+                      fontSize: 40.0,
+                    fontWeight: FontWeight.bold ,
+                  ),
+                ),
+                Text('F L U T T E R      D E V O L O P E R',
+                  style: TextStyle(
+                    fontFamily: 'SourceSansPro',
+                    fontSize: 20.0,
+                    fontWeight: FontWeight.bold ,
+                  ),
+                ),
+                SizedBox(
+                  height: 20.0,
+                ),
+                SizedBox(
+                  height: 50.0,
+                  width: 200.0,
+                  child: ElevatedButton(
+                    style: ButtonStyle(
+                      backgroundColor: MaterialStatePropertyAll(Colors.white),
+                      shape: MaterialStatePropertyAll(
+                        RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20.0),
+                          side: BorderSide(color:Colors.black)
+                        )
+                      )
+                    ),
+                    onPressed: () {  },
+                    child: Text('Get Call',style: TextStyle(
+                      fontFamily: 'SourceSansPro',
+                      color: Colors.black,
+                      fontSize: 20.0,
+                      fontWeight: FontWeight.bold ,
+                    ),),
+                  ),
+                ),
+                SizedBox(
+                  height: 20.0,
+                ),
+                SizedBox(
+                  height: 50.0,
+                  width: 200.0,
+                  child: ElevatedButton(
+                    style: ButtonStyle(
+                        backgroundColor: MaterialStatePropertyAll(Colors.white),
+                        shape: MaterialStatePropertyAll(
+                            RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(20.0),
+                                side: BorderSide(color:Colors.black)
+                            )
+                        )
+                    ),
+                    onPressed: () {  },
+                    child: Text('Send Email',style: TextStyle(
+                      fontFamily: 'SourceSansPro',
+                      color: Colors.black,
+                      fontSize: 20.0,
+                      fontWeight: FontWeight.bold ,
+                    ),),
+                  ),
+                )
+
+
               ],
             )
         ),
