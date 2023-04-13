@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 void main() {
   runApp(const MyApp());
 }
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
+
+  final String _phoneNumber = '+94 768398575';
 
   @override
   Widget build(BuildContext context) {
@@ -59,7 +63,14 @@ class MyApp extends StatelessWidget {
                         )
                       )
                     ),
-                    onPressed: () {  },
+                    onPressed: () async{
+                      final call = 'tel:$_phoneNumber';
+                      if(await canLaunchUrlString(call)){
+                        await launchUrlString(call);
+                      }
+                    },
+
+
                     child: Text('Get Call',style: TextStyle(
                       fontFamily: 'SourceSansPro',
                       color: Colors.black,
@@ -84,8 +95,13 @@ class MyApp extends StatelessWidget {
                             )
                         )
                     ),
-                    onPressed: () {  },
-                    child: Text('Send Email',style: TextStyle(
+                    onPressed: () async{
+                      final text = 'sms:$_phoneNumber';
+                      if(await canLaunchUrlString(text)){
+                        await launchUrlString(text);
+                      }
+                    },
+                    child: Text('Send Messages',style: TextStyle(
                       fontFamily: 'SourceSansPro',
                       color: Colors.black,
                       fontSize: 20.0,
