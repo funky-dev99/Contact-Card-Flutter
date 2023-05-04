@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
 void main() {
@@ -19,10 +18,10 @@ class MyApp extends StatelessWidget {
         body: SafeArea(
             child: Column(
               children: [
-                SizedBox(
+                const SizedBox(
                   height: 60.0,
                 ),
-                Center(
+                const Center(
                   child:
                   CircleAvatar(
                     radius: 100.0,
@@ -30,24 +29,24 @@ class MyApp extends StatelessWidget {
                   ),
                 ),
 
-                SizedBox(
+                const SizedBox(
                   height: 20.0,
                 ),
-                Text('Shahiru Edirisinghe',
+                const Text('Shahiru Edirisinghe',
                   style: TextStyle(
                       fontFamily: 'Pacifico',
                       fontSize: 40.0,
                     fontWeight: FontWeight.bold ,
                   ),
                 ),
-                Text('F L U T T E R      D E V O L O P E R',
+                const Text('F L U T T E R      D E V O L O P E R',
                   style: TextStyle(
                     fontFamily: 'SourceSansPro',
                     fontSize: 20.0,
                     fontWeight: FontWeight.bold ,
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20.0,
                 ),
                 SizedBox(
@@ -55,11 +54,11 @@ class MyApp extends StatelessWidget {
                   width: 200.0,
                   child: ElevatedButton(
                     style: ButtonStyle(
-                      backgroundColor: MaterialStatePropertyAll(Colors.white),
+                      backgroundColor: const MaterialStatePropertyAll(Colors.white),
                       shape: MaterialStatePropertyAll(
                         RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20.0),
-                          side: BorderSide(color:Colors.black)
+                          side: const BorderSide(color:Colors.black)
                         )
                       )
                     ),
@@ -71,7 +70,7 @@ class MyApp extends StatelessWidget {
                     },
 
 
-                    child: Text('Get Call',style: TextStyle(
+                    child: const Text('Get Call',style: TextStyle(
                       fontFamily: 'SourceSansPro',
                       color: Colors.black,
                       fontSize: 20.0,
@@ -79,7 +78,7 @@ class MyApp extends StatelessWidget {
                     ),),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20.0,
                 ),
                 SizedBox(
@@ -87,11 +86,11 @@ class MyApp extends StatelessWidget {
                   width: 200.0,
                   child: ElevatedButton(
                     style: ButtonStyle(
-                        backgroundColor: MaterialStatePropertyAll(Colors.white),
+                        backgroundColor: const MaterialStatePropertyAll(Colors.white),
                         shape: MaterialStatePropertyAll(
                             RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(20.0),
-                                side: BorderSide(color:Colors.black)
+                                side: const BorderSide(color:Colors.black)
                             )
                         )
                     ),
@@ -101,7 +100,7 @@ class MyApp extends StatelessWidget {
                         await launchUrlString(text);
                       }
                     },
-                    child: Text('Send Messages',style: TextStyle(
+                    child: const Text('Send Messages',style: TextStyle(
                       fontFamily: 'SourceSansPro',
                       color: Colors.black,
                       fontSize: 20.0,
